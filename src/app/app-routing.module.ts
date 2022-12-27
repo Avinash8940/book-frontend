@@ -27,6 +27,7 @@ const routes: Routes = [
   canActivate:[AuthGuard],
   data:{roles:["manager"]}
 },
+  {path:'book-grid/:id',component:BookListComponent},
   
 ];
 

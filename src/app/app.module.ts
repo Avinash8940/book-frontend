@@ -12,6 +12,9 @@ import { PaginationComponent } from './components/pagination/pagination.componen
 import { MaterialModule } from './material/material/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
+import { HttpClientModule } from '@angular/common/http';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 @NgModule({
   declarations: [
@@ -26,8 +29,11 @@ import { MatButtonModule } from '@angular/material/button';
     BrowserModule,
     AuthModule,
     AppRoutingModule,
+    HttpClientModule,
+    MatPaginatorModule,
     MaterialModule,
     MatButtonModule,
+    MatGridListModule,
     BrowserAnimationsModule
   ],
   providers: [],

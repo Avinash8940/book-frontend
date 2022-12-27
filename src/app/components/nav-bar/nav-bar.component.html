@@ -7,32 +7,28 @@
     </ul>
 </div> -->
 
-<p>
+  <p>
     <mat-toolbar color="primary">
       <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
         <mat-icon>menu</mat-icon>
       </button>
-      <span>Book Chor</span>
-      <span class="example-spacer"></span>
-          <button mat-button routerLink="/home" routerActiveLink>Home</button>
-          <button mat-button routerLink="/books">Books</button>
+      <span>Book store</span>
+      <span class="'nav'"></span>
+          <button mat-button routerLink="/manager" routerActiveLink>Manager</button>
+          <button mat-button routerLink="/editor">Editor</button>
+          <button mat-button routerLink="/user">User</button>
+
+
   
-      <span [ngClass]="'filler'"></span>
+       <span [ngClass]="'filler'"></span>
           <button mat-raised-button routerLink="/signup" color="accent">signup</button>
           <span [ngStyle]="{'margin': '5px'}"></span>
-          <button mat-raised-button routerLink="/signin" color="accent">signin</button>
+          <button mat-raised-button routerLink="/signin" color="accent">signin</button> 
     </mat-toolbar>
-  </p>
-
-  <section>
-    <div class="example-label">Basic</div>
-    <div class="example-button-row">
-      <button mat-button>Basic</button>
-      <button mat-button color="primary">Primary</button>
-      <button mat-button color="accent">Accent</button>
-      <button mat-button color="warn">Warn</button>
-      <button mat-button disabled>Disabled</button>
-      <a mat-button href="https://www.google.com/" target="_blank">Link</a>
-    </div>
-  </section>
   
+  <!-- <mat-paginator #paginator pageSize=4></mat-paginator> -->
+  <!-- <table mat-table [dataSource]="EmpData"></table>
+<mat-paginator #paginator [pageSizeOptions]="[2, 4, 6,]" 
+showFirstLastButtons></mat-paginator> -->
+
+  </p>

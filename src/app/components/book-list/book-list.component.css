@@ -1,0 +1,27 @@
+/* .mat{
+    /* background-color: grey; */
+    /* color: rgb(205, 148, 73); */
+/* } */
+table {
+    width: 100%;
+    background-color: grey;
+  }
+  
+  .mat-mdc-form-field {
+    font-size: 14px;
+    width: 50%;
+  }
+  
+  td, th {
+    width: 0%;
+  }
+  .mat-row {
+    height: auto;
+  }
+  
+  .mat-cell {
+    padding: 8px 8px 8px 0;
+  }
+  mat-grid-tile {
+    background: lightblue;
+  }

@@ -1,79 +1,141 @@
-<p>book-list works!</p>
+<table mat-table [dataSource]="bookList" class="mat">
 
+  <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
 
-<!-- <table mat-table [dataSource]="freelancers" class="mat-elevation-z8">
+  <!-- Position Column -->
+  <!-- <ng-container matColumnDef="position">
+    <th mat-header-cell *matHeaderCellDef> No. </th>
+    <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+  </ng-container> -->
 
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef> <b>Id</b> </th>
+    <td mat-cell *matCellDef="let book"> {{book.id}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="title">
+    <th mat-header-cell *matHeaderCellDef> <b>Title</b> </th>
+    <td mat-cell *matCellDef="let book"> {{book.title}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="subTitle">
+    <th mat-header-cell *matHeaderCellDef> <b>subTitle</b> </th>
+    <td mat-cell *matCellDef="let book"> {{book.subTitle}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="author">
+    <th mat-header-cell *matHeaderCellDef> <b>author</b> </th>
+    <td mat-cell *matCellDef="let book"> {{book.author}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="originalPrice">
+    <th mat-header-cell *matHeaderCellDef> <b>originalPrice</b> </th>
+    <td mat-cell *matCellDef="let book"> {{book.originalPrice}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="sellingPrice">
+    <th mat-header-cell *matHeaderCellDef> <b>sellingPrice</b> </th>
+    <td mat-cell *matCellDef="let book"> {{book.sellingPrice}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="category">
+    <th mat-header-cell *matHeaderCellDef> <b>category</b> </th>
+    <td mat-cell *matCellDef="let book"> {{book.category}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="type">
+    <th mat-header-cell *matHeaderCellDef> <b>type</b> </th>
+    <td mat-cell *matCellDef="let book"> {{book.type}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="rating">
+    <th mat-header-cell *matHeaderCellDef> <b>rating</b> </th>
+    <td mat-cell *matCellDef="let book"> {{book.rating}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="discount">
+    <th mat-header-cell *matHeaderCellDef> <b>discount</b> </th>
+    <td mat-cell *matCellDef="let book"> {{book.discount}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="paperQuality">
+    <th mat-header-cell *matHeaderCellDef> <b>paperQuality</b> </th>
+    <td mat-cell *matCellDef="let book"> {{book.paperQuality}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="bookSize">
+    <th mat-header-cell *matHeaderCellDef> <b>bookSize </b></th>
+    <td mat-cell *matCellDef="let book"> {{book.bookSize}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="language">
+    <th mat-header-cell *matHeaderCellDef> <b>language</b> </th>
+    <td mat-cell *matCellDef="let book"> {{book.language}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="editor">
+    <th mat-header-cell *matHeaderCellDef> <b>editor</b> </th>
+    <td mat-cell *matCellDef="let book"> {{book.editor}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="publisher">
+    <th mat-header-cell *matHeaderCellDef> <b> publisher</b> </th>
+    <td mat-cell *matCellDef="let book"> {{book.publisher}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="edition">
+    <th mat-header-cell *matHeaderCellDef> <b>edition</b></th>
+    <td mat-cell *matCellDef="let book"> {{book.edition}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="publishDate">
+    <th mat-header-cell *matHeaderCellDef> <b>publishDate </b></th>
+    <td mat-cell *matCellDef="let book"> {{book.publishDate}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="manufactureDate">
+    <th mat-header-cell *matHeaderCellDef> <b>manufactureDate</b> </th>
+    <td mat-cell *matCellDef="let book"> {{book.manufactureDate}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="manufacturePlace">
+    <th mat-header-cell *matHeaderCellDef> <b>manufacturePlace</b> </th>
+    <td mat-cell *matCellDef="let book"> {{book.manufacturePlace}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="pages">
+    <th mat-header-cell *matHeaderCellDef> <b>pages</b> </th>
+    <td mat-cell *matCellDef="let book"> {{book.pages}} </td>
+  </ng-container>
   
-    <ng-container matColumnDef="_id">
-      <th mat-header-cell *matHeaderCellDef> id </th>
-      <td mat-cell *matCellDef="let book"> {{book.id}} </td>
-    </ng-container>
-  
-    <ng-container matColumnDef="title">
-      <th mat-header-cell *matHeaderCellDef> Title </th>
-      <td mat-cell *matCellDef="let book"> {{book.title}} </td>
-    </ng-container>
-    <ng-container matColumnDef="subTitle">
-        <th mat-header-cell *matHeaderCellDef> subTitle </th>
-        <td mat-cell *matCellDef="let book"> {{book.subTitle}} </td>
-      </ng-container>
-  
-    <ng-container matColumnDef="author">
-      <th mat-header-cell *matHeaderCellDef> author </th>
-      <td mat-cell *matCellDef="let freelancer"> {{book.author}}</td>
-    </ng-container> -->
-  
-    <!-- Symbol Column
-    <ng-container matColumnDef="mobile">
-      <th mat-header-cell *matHeaderCellDef> mobile </th>
-      <td mat-cell *matCellDef="let freelancer"> {{freelancer.mobile}} </td>
-    </ng-container>
 
-    <ng-container matColumnDef="hoursPerWeek">
-        <th mat-header-cell *matHeaderCellDef> hoursPerWeek </th>
-        <td mat-cell *matCellDef="let freelancer"> {{freelancer.hoursPerWeek}} </td>
-      </ng-container>
+  <tr mat-header-row *matHeaderRowDef="bookColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: bookColumns;"></tr>
 
-      <ng-container matColumnDef="rating">
-        <th mat-header-cell *matHeaderCellDef> rating </th>
-        <td mat-cell *matCellDef="let freelancer"> {{freelancer.rating}} </td>
-      </ng-container>
+</table>
+<!-- <mat-grid-list cols="5" rowHeight="2:1">
+  <mat-grid-tile>1</mat-grid-tile>
+  <mat-grid-tile>2</mat-grid-tile>
+  <mat-grid-tile>3</mat-grid-tile>
+  <mat-grid-tile>4</mat-grid-tile>
+  <mat-grid-tile>5</mat-grid-tile>
+  <mat-grid-tile>6</mat-grid-tile>
+  <mat-grid-tile>7</mat-grid-tile>
+  <mat-grid-tile>8</mat-grid-tile>
+  <mat-grid-tile>9</mat-grid-tile>
+  <mat-grid-tile>10</mat-grid-tile>
+</mat-grid-list> -->
 
-      <ng-container matColumnDef="talentQuality">
-        <th mat-header-cell *matHeaderCellDef> talentQuality </th>
-        <td mat-cell *matCellDef="let freelancer"> {{freelancer.talentQualitty}} </td>
-      </ng-container>
+<!-- <li *ngFor="let book of books">
+<button (click)="showDetails(book)">Grid</button>
+</li> -->
+<b><mat-paginator [length]="10"
+[pageSize]="5"
+[pageSizeOptions]="[2, 3, 4, 5]"
+aria-label="Select page">
+</mat-paginator></b>
 
-      <ng-container matColumnDef="availableBadge">
-        <th mat-header-cell *matHeaderCellDef> availableBadge </th>
-        <td mat-cell *matCellDef="let freelancer"> {{freelancer.availableBadge}} </td>
-      </ng-container>
 
-      <ng-container matColumnDef="gender">
-        <th mat-header-cell *matHeaderCellDef> gender </th>
-        <td mat-cell *matCellDef="let freelancer"> {{freelancer.gender}} </td>
-      </ng-container>
 
-      <ng-container matColumnDef="jobsCompleted">
-        <th mat-header-cell *matHeaderCellDef> jobsCompleted </th>
-        <td mat-cell *matCellDef="let freelancer"> {{freelancer.jobsCompleted}} </td>
-      </ng-container>
 
-      <ng-container matColumnDef="joinedDate">
-        <th mat-header-cell *matHeaderCellDef> joinedDate </th>
-        <td mat-cell *matCellDef="let freelancer"> {{freelancer.joinedDate}} </td>
-      </ng-container>
-
-      <ng-container matColumnDef="pricePerHour">
-        <th mat-header-cell *matHeaderCellDef> pricePerHour</th>
-        <td mat-cell *matCellDef="let freelancer"> {{freelancer.pricePerHour}} </td>
-      </ng-container>
-
-      <ng-container matColumnDef="description">
-        <th mat-header-cell *matHeaderCellDef> description </th>
-        <td mat-cell *matCellDef="let freelancer"> {{freelancer.description}} </td>
-      </ng-container>
-   -->
-    <!-- <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-  </table> -->
