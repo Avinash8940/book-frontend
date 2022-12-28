@@ -1,12 +1,9 @@
 .filler{
     flex: 1 1 auto;
 }
-/* .nav:hover{
-    letter-spacing: 20px; 
-    color: aqua;
-    background-color: aqua;
-     
-} */
+span{
+  color: orange;
+}
   mat-footer-row, mat-header-row, mat-row {
     border-bottom-width: 10px;
   }

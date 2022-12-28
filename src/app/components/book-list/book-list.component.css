@@ -4,7 +4,7 @@
 /* } */
 table {
     width: 100%;
-    background-color: grey;
+    background-color: rgb(251, 247, 247);
   }
   
   .mat-mdc-form-field {
@@ -13,10 +13,10 @@ table {
   }
   
   td, th {
-    width: 0%;
+    width: 10%;
   }
   .mat-row {
-    height: auto;
+    height: 10;
   }
   
   .mat-cell {

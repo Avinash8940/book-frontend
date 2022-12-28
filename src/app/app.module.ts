@@ -15,6 +15,11 @@ import { MatButtonModule } from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import {ReactiveFormsModule } from '@angular/forms';
+import { AddEditBookComponent } from './components/add-edit-book/add-edit-book.component';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from "@angular/material/form-field";
 
 @NgModule({
   declarations: [
@@ -23,18 +28,26 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     NavBarComponent,
     BookListComponent,
     BookDetailsComponent,
-    PaginationComponent
+    PaginationComponent,
+    AddEditBookComponent,
+   
+
+  
   ],
   imports: [
     BrowserModule,
     AuthModule,
-    AppRoutingModule,
     HttpClientModule,
     MatPaginatorModule,
     MaterialModule,
     MatButtonModule,
     MatGridListModule,
-    BrowserAnimationsModule
+    MatInputModule,
+    MatFormFieldModule,
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
+    AppRoutingModule,
+    MatNativeDateModule
   ],
   providers: [],
   bootstrap: [AppComponent]

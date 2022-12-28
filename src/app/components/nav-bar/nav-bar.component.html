@@ -1,34 +1,19 @@
-<!-- <div [ngClass]="'change'">
-    <ul>
-        <li><a routerLink="home" routerLinkActive>Home</a></li>
-        <li><a routerLink="products">Products</a></li>
-        <li><a routerLink="admin">Admin</a></li>
-        <li><a routerLink="shared">View</a></li>
-    </ul>
-</div> -->
-
   <p>
     <mat-toolbar color="primary">
       <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
         <mat-icon>menu</mat-icon>
       </button>
       <span>Book store</span>
-      <span class="'nav'"></span>
-          <button mat-button routerLink="/manager" routerActiveLink>Manager</button>
-          <button mat-button routerLink="/editor">Editor</button>
-          <button mat-button routerLink="/user">User</button>
-
-
-  
        <span [ngClass]="'filler'"></span>
-          <button mat-raised-button routerLink="/signup" color="accent">signup</button>
+       <button mat-raised-button (click)="onGrid()" color="accent">GridView</button>
+       <button mat-raised-button (click)="onClick()" color="black" >ADDBOOK</button><br>
+          <button mat-raised-button (click)="onLogout()" color="accent">LOGOUT</button>
           <span [ngStyle]="{'margin': '5px'}"></span>
-          <button mat-raised-button routerLink="/signin" color="accent">signin</button> 
     </mat-toolbar>
-  
-  <!-- <mat-paginator #paginator pageSize=4></mat-paginator> -->
-  <!-- <table mat-table [dataSource]="EmpData"></table>
-<mat-paginator #paginator [pageSizeOptions]="[2, 4, 6,]" 
-showFirstLastButtons></mat-paginator> -->
-
   </p>
+  
+
+  
+
+<!--         
+    <router-outlet></router-outlet> -->

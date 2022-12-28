@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './auth/auth.guard';
 import { BookDetailsComponent } from './components/book-details/book-details.component';
 import { BookListComponent } from './components/book-list/book-list.component';
+import { AddEditBookComponent } from './components/add-edit-book/add-edit-book.component';
 
 const routes: Routes = [
   { path:'',
@@ -13,22 +14,23 @@ const routes: Routes = [
   path:'book-list',
   component:BookListComponent,
   canActivate:[AuthGuard],
-  data:{roles:["manager","user","editor"]}
+  data:{roles:["admin","user","editor"]}
 },
 {
-  path:'book-details',
-  component:BookDetailsComponent,
+  path:'add-book',
+  component:AddEditBookComponent,
   canActivate:[AuthGuard],
-  data:{roles:["manager","user","editor"]}
+  data:{roles:["admin"]}
 },
 {
-  path:'book-details:/book',
+  path:'book-details/:book',
   component:BookDetailsComponent,
   canActivate:[AuthGuard],
-  data:{roles:["manager"]}
+  data:{roles:["admin","user","editor"]}
 },
-  {path:'book-grid/:id',component:BookListComponent},
-  
+{
+  path:'grid-view',component:BookDetailsComponent
+}
 ];
 
 @NgModule({

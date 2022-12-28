@@ -1,18 +1,9 @@
 <table mat-table [dataSource]="bookList" class="mat">
 
-  <!--- Note that these columns can be defined in any order.
-        The actual rendered columns are set as a property on the row definition" -->
-
-  <!-- Position Column -->
-  <!-- <ng-container matColumnDef="position">
-    <th mat-header-cell *matHeaderCellDef> No. </th>
-    <td mat-cell *matCellDef="let element"> {{element.position}} </td>
-  </ng-container> -->
-
   <ng-container matColumnDef="id">
-    <th mat-header-cell *matHeaderCellDef> <b>Id</b> </th>
+    <th mat-header-cell *matHeaderCellDef> <b>id</b> </th>
     <td mat-cell *matCellDef="let book"> {{book.id}} </td>
-  </ng-container>
+    </ng-container>
 
   <ng-container matColumnDef="title">
     <th mat-header-cell *matHeaderCellDef> <b>Title</b> </th>
@@ -108,18 +99,25 @@
     <th mat-header-cell *matHeaderCellDef> <b>pages</b> </th>
     <td mat-cell *matCellDef="let book"> {{book.pages}} </td>
   </ng-container>
+
+  <ng-container matColumnDef="edit">
+    <th mat-header-cell *matHeaderCellDef>  </th>
+    <td mat-cell *matCellDef="let book"> <button><mat-icon>edit</mat-icon></button> </td>
+  </ng-container>
+  <ng-container matColumnDef="delete">
+    <th mat-header-cell *matHeaderCellDef>  </th>
+    <td mat-cell *matCellDef="let book"> <button (click)="onDelete(book.id)"><mat-icon>delete</mat-icon></button> </td>
+  </ng-container>
   
 
   <tr mat-header-row *matHeaderRowDef="bookColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: bookColumns;"></tr>
 
 </table>
-<b><mat-paginator [length]="10"
-[pageSize]="5"
-[pageSizeOptions]="[2, 3, 4, 5]"
-aria-label="Select page">
+<b><mat-paginator [length]="20"
+              [pageSize]="5"
+              [pageSizeOptions]="[2,4,6,8,10]"
+              (page)="onPageChange($event)"
+              aria-label="Select page">
 </mat-paginator></b>
-
-
-
-
+  

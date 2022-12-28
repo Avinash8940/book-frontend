@@ -7,6 +7,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import {MatSelectModule} from '@angular/material/select';
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatRadioModule} from '@angular/material/radio';
 
 
 
@@ -21,7 +22,8 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     MatDatepickerModule,
     MatToolbarModule,
     MatPaginatorModule,
-    MatTableModule
+    MatTableModule,
+    MatRadioModule
 
   ],
   exports:[
@@ -32,7 +34,8 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     MatDatepickerModule,
     MatToolbarModule,
     MatPaginatorModule,
-    MatTableModule
+    MatTableModule,
+    MatRadioModule
   ]
 })
 export class MaterialModule { }
